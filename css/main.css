@@ -9,3 +9,27 @@
 	-o-border-radius:100%;
 	-ms-border-radius:100%;
 }
+.start-p, .end-p{
+	position:absolute;
+	width:15px;
+	height:15px;
+	background:blue;
+	border-radius:100%;
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	-ms-border-radius:100%;
+	-o-border-radius:100%;
+	border:1px solid rgba(0,0,0,0);
+}
+.c-p{
+	position:absolute;
+	width:10px;
+	height:10px;
+	background:green;
+	border-radius:100%;
+	-webkit-border-radius:100%;
+	-o-border-radius:100%;
+	-moz-border-radius:100%;
+	-ms-border-radius:100%;
+	border:1px solid rgba(0,0,0,0);
+}
