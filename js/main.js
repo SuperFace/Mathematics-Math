@@ -2,7 +2,9 @@ $(function(){
 	var box = $("#box");
 	var n=1, t=0;
 	var p0 = {x: 100, y: 350},p1 = {x: 100,y:30},p2 = {x: 400, y: 30}, p3 = {x: 500, y: 250}, p4 = {x: 550, y: 50}, p5 = {x: 500, y: 480}, p6 = {x: 380, y:80}, p7 = {x:300, y: 100}, p8={x: 250,y:150};
-	/*do{
+	
+	/*//根据阶数：n，t值，绘制一条贝塞尔曲线
+	 * do{
 		var linePoint = bezier.bezier_n(n, t, p0, p1, p2, p3, p4, p5);
 		var point = document.createElement("div");
 		point.className = "point";
@@ -12,7 +14,8 @@ $(function(){
 		t+=0.01;
 	}while(t <= 1)*/
 	
-	/*var _handler = setInterval(function(){
+	/*//动画：绘制：1阶-8阶贝塞尔曲线
+	 * var _handler = setInterval(function(){
 		if(t > 1){
 			n++;
 			t = 0;
@@ -55,33 +58,34 @@ $(function(){
         }
     };  
 	
-	n = 3;
+	n = 3;//3阶
+	//画起始点
 	var startP = document.createElement("div");
 	startP.className = "start-p";
 	startP.style.top = p0.y+"px";
 	startP.style.left = p0.x + "px";
 	box[0].appendChild(startP);
-	
+	//结束点
 	var endP = document.createElement("div");
 	endP.className = "end-p";
 	endP.style.top = p3.y+"px";
 	endP.style.left = p3.x + "px";
 	box[0].appendChild(endP);
-	
+	//控制点1
 	var cP1 = document.createElement("div");
 	cP1.className = "c-p";
 	cP1.id = "c-p1";
 	cP1.style.top = p1.y+"px";
 	cP1.style.left = p1.x + "px";
 	box[0].appendChild(cP1);
-	
+	//控制点2
 	var cP2 = document.createElement("div");
 	cP2.className = "c-p";
 	cP2.id = "c-p2";
 	cP2.style.top = p2.y+"px";
 	cP2.style.left = p2.x + "px";
 	box[0].appendChild(cP2);
-	
+	//绘制曲线
 	var drawBezier = function(cP1, cP2){
 		$(".point").remove();
 		t = 0;
@@ -96,7 +100,7 @@ $(function(){
 		}while(t<=1)
 	};
 	drawBezier(p1, p2);
-	
+	//拖拽控制点1
 	$("#c-p1")[0].onmousedown = function(e){
 		var d = document;
         var that=this;
@@ -129,6 +133,7 @@ $(function(){
             d.onmouseup = null;
         }
 	};
+	//拖拽控制点2
 	$("#c-p2")[0].onmousedown=function(e){
 		var d = document;
         var  that=this;
