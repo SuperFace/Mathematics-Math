@@ -11,8 +11,8 @@
 }
 .start-p, .end-p{
 	position:absolute;
-	width:15px;
-	height:15px;
+	width:10px;
+	height:10px;
 	background:blue;
 	border-radius:100%;
 	-webkit-border-radius:100%;

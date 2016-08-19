@@ -156,13 +156,6 @@ $(function(){
 			p0 = {x: tx, y: ty};
 		});
 	});
-	//拖拽终止点
-	$("#end-p5").on("mousedown", function(e){
-		drayFunction($("#end-p")[0], e, function(tx, ty){
-			p5 = {x: tx, y: ty};
-		});
-	});
-	
 	//拖拽控制点1
 	$("#c-p1").on("mousedown", function(e){
 		drayFunction($("#c-p1")[0], e, function(tx, ty){
@@ -185,6 +178,12 @@ $(function(){
 	$("#c-p4").on("mousedown", function(e){
 		drayFunction($("#c-p4")[0], e, function(tx, ty){
 			p4 = {x: tx, y: ty};
+		});
+	});
+	//拖拽终止点
+	$("#end-p5").on("mousedown", function(e){
+		drayFunction($("#end-p")[0], e, function(tx, ty){
+			p5 = {x: tx, y: ty};
 		});
 	});
 });
