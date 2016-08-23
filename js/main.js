@@ -58,7 +58,7 @@ $(function(){
         }
     };  
 	
-	n = 3;//5阶
+	n = 5;//5阶
 	//画起始点
 	var startP = document.createElement("div");
 	startP.className = "start-p";
@@ -87,7 +87,7 @@ $(function(){
 	cP2.style.top = p2.y+"px";
 	cP2.style.left = p2.x + "px";
 	box[0].appendChild(cP2);
-	/*//控制点3
+	//控制点3
 	var cP3 = document.createElement("div");
 	cP3.className = "c-p";
 	cP3.id = "c-p3";
@@ -100,13 +100,13 @@ $(function(){
 	cP4.id = "c-p4";
 	cP4.style.top = p4.y+"px";
 	cP4.style.left = p4.x + "px";
-	box[0].appendChild(cP4);*/
+	box[0].appendChild(cP4);
 	//绘制曲线
 	var drawBezier = function(){
 		$(".point").remove();
 		t = 0;
 		do{
-			var linePoint = bezier.bezier_n(n, t, p0, p1, p2, /*p3, p4,*/ p5);
+			var linePoint = bezier.bezier_n(n, t, p0, p1, p2, p3, p4, p5);
 			var point = document.createElement("div");
 			point.className = "point";
 			point.style.top = linePoint.y+"px";
