@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>贝赛尔曲线</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="贝赛尔曲线" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store,no-siteapp, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui;">
+<!-- <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="贝赛尔曲线">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true"> -->
+<meta name="format-detection" content="telephone=no">
+<script type="text/javascript">
+// 转化rem到vm，主要是用来计算padding，margin，width等等
+;(function(win) {
+    function setUnitA() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px";
+    }
+    var h = null;
+    window.addEventListener("resize", function() {
+        clearTimeout(h);
+        h = setTimeout(setUnitA, 300);
+    }, false);
+    setUnitA();
+})(window);
+</script>
+<meta content="authenticity_token" name="csrf-param">
+<meta content="kZ5LOthY3uQOg7DFCyz0/Dkff9owSbfWc+wRLLMv7jI=" name="csrf-token">
+<link href="./css/base.css" rel="stylesheet" type="text/css">
+<link href="./css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="box" style="position:relative;width:600px;height:500px;margin:0 auto;border:1px solid #000;"></div>
+<script src="../pub/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/bezier.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

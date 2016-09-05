@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>高等数据公式</title>
+<title>重力加速度</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content="高等数据公式" />
+<meta name="description" content="重力加速度" />
 <meta http-equiv="Cache-Control" content="no-cache, no-store,no-siteapp, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
 <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui;">
 <!-- <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-title" content="高等数据公式">
+<meta name="apple-mobile-web-app-title" content="重力加速度">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="full-screen" content="yes">
 <meta name="x5-fullscreen" content="true"> -->
@@ -35,10 +35,15 @@
 <link href="./css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="box" style="position:relative;width:600px;height:500px;margin:0 auto;border:1px solid #000;"></div>
-<script src="./js/client.min.js"></script>
-<script src="./js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="./js/bezier.min.js"></script>
+<p>横向系数：<input id="hp" type="text" value="0.1" /> (0-1)</p>
+<p>纵向系数：<input id="vp" type="text" value="0.6" /> (0-1)</p>
+<p>速度：<input id="sp" type="text" value="20" />(20-1000)
+<input type="button" value="demo" onclick="demo(document.getElementById('hp').value, document.getElementById('vp').value, document.getElementById('sp').value)" /></p>
+<div style="margin-left:600px;">
+	<div id="fall" style="width:30px; height:30px; background:#f90; position:relative; right:0px; bottom:40px"></div>
+</div>
+<script src="../pub/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/acceleration.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
